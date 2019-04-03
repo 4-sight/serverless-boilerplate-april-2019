@@ -1,0 +1,58 @@
+# NOTE: update this with your service name
+service: serverless-boilerplate-april-2019
+
+# Use the serverless-webpack plugin to transpile ES6
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+# serverless-webpack configuration
+# Enable auto-packing of external modules
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+  # To load environment variables externally
+  # rename env.example to env.yml and uncomment
+  # the following line. Also, make sure to not
+  # commit your env.yml.
+  #
+  #environment: ${file(env.yml):${self:provider.stage}}
+
+functions:
+  api/v1/todos/index:
+    handler: handlers/api/v1/todos/index.default
+    events:
+      - http:
+          path: api/v1/todos
+          method: get
+  api/v1/todos/show:
+    handler: handlers/api/v1/todos/show.default
+    events:
+      - http:
+          path: api/v1/todos/{id}
+          method: get
+  api/v1/todos/create:
+    handler: handlers/api/v1/todos/create.default
+    events:
+      - http:
+          path: api/v1/todos
+          method: post
+  api/v1/todos/update:
+    handler: handlers/api/v1/todos/update.default
+    events:
+      - http:
+          path: api/v1/todos/{id}
+          method: put
+  api/v1/todos/delete:
+    handler: handlers/api/v1/todos/delete.default
+    events:
+      - http:
+          path: api/v1/todos/{id}
+          method: delete

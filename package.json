@@ -1,0 +1,39 @@
+{
+  "name": "serverless-boilerplate-april-2019",
+  "version": "1.0.0",
+  "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
+  "main": "handler.js",
+  "scripts": {
+    "start": "serverless offline start",
+    "lint": "node_modules/.bin/eslint .",
+    "test": "cross-env NODE_ENV=test node_modules/.bin/mocha --recursive --require @babel/register"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-source-map-support": "^2.0.1",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-mocha": "^5.3.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "mocha": "^6.0.2",
+    "serverless-offline": "^4.9.3",
+    "serverless-webpack": "^5.2.0",
+    "webpack": "^4.29.6",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.3",
+    "source-map-support": "^0.4.18"
+  }
+}
