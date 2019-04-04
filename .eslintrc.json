@@ -1,5 +1,7 @@
 {
   "extends": ["airbnb/base", "plugin:promise/recommended"],
   "plugins": ["promise"],
-  "rules": {}
+  "rules": {
+    "semi": "off"
+  }
 }
