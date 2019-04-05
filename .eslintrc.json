@@ -2,6 +2,7 @@
   "extends": ["airbnb/base", "plugin:promise/recommended"],
   "plugins": ["promise"],
   "rules": {
-    "semi": "off"
+    "semi": "off",
+    "no-underscore-dangle": "off"
   }
 }

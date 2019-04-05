@@ -4,5 +4,8 @@
   "env": {
     "mocha": true
   },
-  "rules": {}
+  "rules": {
+    "semi": "off",
+    "no-underscore-dangle": "off"
+  }
 }
