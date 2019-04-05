@@ -46,6 +46,11 @@ $ npm install
 ```
 
 ### Usage
+To add environment variables
+
+```bash
+$ touch .env
+```
 
 To run unit tests on your local
 
