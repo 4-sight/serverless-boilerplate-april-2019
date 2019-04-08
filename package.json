@@ -6,7 +6,7 @@
   "scripts": {
     "start": "serverless offline start",
     "lint": "node_modules/.bin/eslint .",
-    "test": "cross-env NODE_ENV=test node_modules/.bin/mocha --recursive --require @babel/register"
+    "test": "sls invoke test --compilers js:@babel/register"
   },
   "author": "",
   "license": "MIT",
