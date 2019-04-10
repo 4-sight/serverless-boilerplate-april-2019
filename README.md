@@ -51,6 +51,12 @@ Install dynamodb local
 $ sls dynamodb install
 ```
 
+Create local store for db
+
+```bash
+$ touch .dynamodb/local-store
+```
+
 ### Usage
 To add environment variables
 
