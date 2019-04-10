@@ -15,6 +15,15 @@ custom:
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
+  dynamodb:
+    stages:
+      - dev
+      - test
+    start:
+      port: 8000
+      dbPath: ./dynamodb/local-store
+      heapInitial: 200m
+      heapMax: 1g
 
 provider:
   name: aws
