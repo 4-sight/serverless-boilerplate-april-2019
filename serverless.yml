@@ -21,6 +21,8 @@ provider:
   runtime: nodejs8.10
   stage: dev
   region: eu-west-1
+  environment:
+    STAGE: ${opt:stage, self:provider.stage}
 
 #functions:
 #  api/v1/users/example:
