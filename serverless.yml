@@ -7,6 +7,7 @@ plugins:
   - serverless-dotenv-plugin
   - serverless-offline
   - serverless-mocha-plugin
+  - serverless-dynamodb-local
 
 # serverless-webpack configuration
 # Enable auto-packing of external modules
