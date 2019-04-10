@@ -3,11 +3,11 @@ service: serverless-boilerplate-april-2019
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
-  - serverless-webpack
+  - serverless-webpack #needs to be first
   - serverless-dotenv-plugin
-  - serverless-offline
   - serverless-mocha-plugin
   - serverless-dynamodb-local
+  - serverless-offline #needs to be last
 
 # serverless-webpack configuration
 # Enable auto-packing of external modules
