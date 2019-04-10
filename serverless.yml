@@ -21,7 +21,7 @@ custom:
       - test
     start:
       port: 8000
-      dbPath: ./dynamodb/local-store
+      dbPath: ./dynamodb/
       heapInitial: 200m
       heapMax: 1g
 
