@@ -6,7 +6,6 @@ plugins:
   - serverless-webpack #needs to be first
   - serverless-dotenv-plugin
   - serverless-mocha-plugin
-  - serverless-dynamodb-local
   - serverless-offline #needs to be last
 
 # serverless-webpack configuration
@@ -15,15 +14,6 @@ custom:
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
-  dynamodb:
-    stages:
-      - dev
-      - test
-    start:
-      port: 8000
-      dbPath: ./dynamodb/
-      heapInitial: 200m
-      heapMax: 1g
 
 provider:
   name: aws
