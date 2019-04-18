@@ -45,12 +45,6 @@ Install the Node.js packages
 $ npm install
 ```
 
-Install dynamodb local
-
-```bash
-$ sls dynamodb install
-```
-
 ### Usage
 To add environment variables
 
